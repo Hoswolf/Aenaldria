@@ -33,7 +33,7 @@ public class SymbolProperties : MonoBehaviour
         Him.transform.position = worldPosition;
 
         }
-        if (Input.GetKeyDown(KeyCode.Z) && Have == true)
+        if (Input.GetKeyDown(KeyCode.S) && Have == true)
         {
            Have = false;
         } 
