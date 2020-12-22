@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Lienzo
   - Content1
+  - UIC
   layers:
   - Default
   - TransparentFX

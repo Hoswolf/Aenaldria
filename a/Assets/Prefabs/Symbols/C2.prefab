@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 974598640983703506}
   - component: {fileID: 1893101854828041450}
   - component: {fileID: 2274433954112464816}
+  - component: {fileID: -6505857069843895141}
   m_Layer: 5
   m_Name: C2
   m_TagString: Untagged
@@ -150,7 +151,11 @@ MonoBehaviour:
   Have: 0
   InAct: 0
   Interactable: 0
+  InLine: 0
+  col: {fileID: -6505857069843895141}
   Him: {fileID: 1972659678880137256}
+  Line: {fileID: 8822784047032615500, guid: a69166a196bdab5418cb6dc6aeb0aa61, type: 3}
+  Origin: {fileID: 1983856470119162009}
 --- !u!95 &2274433954112464816
 Animator:
   serializedVersion: 3
@@ -170,3 +175,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &-6505857069843895141
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972659678880137256}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 73

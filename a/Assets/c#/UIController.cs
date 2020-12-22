@@ -10,20 +10,24 @@ public class UIController : MonoBehaviour
     public GameObject[] Symbol;
     public GameObject Lienzo;
     public GameObject LineR;
-   
+
+ 
+
     public Text Indicator;
     
     public int Num;
     public int Item_Num;
+    public int Line;
+    
    
     public bool Swipe;
-    public bool LineMode;
+ 
 
 
 
     void Start()
     {
-        LineMode = false;
+        Line = 0;
         Indicator.text = "Lock";
         Swipe = false;
         Item_Num = 0;
@@ -36,14 +40,14 @@ public class UIController : MonoBehaviour
     }
    
     // Update is called once per frame
-    void FixedUpdate()
-    {  
-       
-        
-    }
+    public void LineAble()
+    {
 
+        Line = 0;
+    }
     private void Update()
     {
+
            PlayerPrefs.SetInt("Mode",Item_Num);
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -63,21 +67,24 @@ public class UIController : MonoBehaviour
 
 
         }
-        if(LineMode == false)
+        if(Line == 0)
         {
  if (Input.GetKeyDown(KeyCode.L))
         {
-            Instantiate(LineR,transform.position,Quaternion.identity);
+                var NewLine = Instantiate(LineR, transform.position, Quaternion.identity);
+               // NewLine.transform.SetParent(transform);
+                NewLine.transform.localScale = new Vector3(1, 1, 1);
+              
+               
             Indicator.text = "Line";
             Item_Num = 2;
-                LineMode = true;
+                Line = 1;
+               
         }
         }
-       
-        
+
+
     }
-
-
 
 
 
