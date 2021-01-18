@@ -70,7 +70,8 @@ public class UIController : MonoBehaviour
         if(Line == 0)
         {
  if (Input.GetKeyDown(KeyCode.L))
-        {
+            {
+               // Vector2 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 var NewLine = Instantiate(LineR, transform.position, Quaternion.identity);
                // NewLine.transform.SetParent(transform);
                 NewLine.transform.localScale = new Vector3(1, 1, 1);
